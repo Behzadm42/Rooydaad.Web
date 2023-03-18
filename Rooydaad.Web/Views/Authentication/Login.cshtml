@@ -1,0 +1,22 @@
+﻿@model LoginModel
+<div class="container my-5">
+    <form method="post" asp-controller="Authentication" asp-action="login">
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <label  class="form-label"> jafar</label>
+            <input name="MyProperty" class="form-control" />
+        </div>
+        <div class="form-outline mb-4">
+            <label asp-for=LoginProvider class="form-label"></label>
+            <input asp-for=LoginProvider class="form-control" />
+        </div>
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+            <label class="form-label">Password</label>
+            <input asp-for=ProviderKey class="form-control" />
+        </div>
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+    </form>
+    <p>@ViewData["Message"]</p>
+</div>
